@@ -5,7 +5,7 @@ class AlwaysBetrayal:
     def answer(self) -> int:
         return BETRAYAL
 
-    def set_competitor_answer(self):
+    def set_competitor_answer(self, answer_of_competitor: int):
         pass
 
 
@@ -13,7 +13,7 @@ class AlwaysSilence:
     def answer(self) -> int:
         return SILENCE
 
-    def set_competitor_answer(self):
+    def set_competitor_answer(self, answer_of_competitor: int):
         pass
 
 
@@ -24,7 +24,7 @@ class PreviousCompetitorAnswer:
     def answer(self):
         return self.previous_competitor_answer
 
-    def set_competitor_answer(self, answer_of_competitor):
+    def set_competitor_answer(self, answer_of_competitor: int):
         self.previous_competitor_answer = answer_of_competitor
 
 
@@ -40,5 +40,5 @@ class AlternatelyAnswer:
 
         return self.previous_self_answer
 
-    def set_competitor_answer(self):
+    def set_competitor_answer(self, answer_of_competitor: int):
         pass
