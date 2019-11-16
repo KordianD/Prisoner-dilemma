@@ -2,8 +2,7 @@ from config import ALL_STRATEGIES
 
 print("Start ")
 
-for strategy in ALL_STRATEGIES:
-    for inner_strategy in ALL_STRATEGIES:
-        pass
+for first_player_strategy in ALL_STRATEGIES:
+    for second_player_strategy in ALL_STRATEGIES:
 
 print("Stop ")
