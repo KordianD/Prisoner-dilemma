@@ -29,7 +29,7 @@ class PreviousCompetitorAnswer:
 
 
 class AlternatelyAnswer:
-    def _init__(self):
+    def __init__(self):
         self.previous_self_answer = SILENCE
 
     def answer(self):

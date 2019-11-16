@@ -28,5 +28,12 @@ for first_player_strategy in ALL_STRATEGIES:
                 second_player_revenue += DECISION_REVENUE[first_player_answer][second_player_answer][
                     SECOND_PLAYER_INDEX]
 
+                first_player.set_competitor_answer(second_player_answer)
+                second_player.set_competitor_answer(first_player_answer)
+
+            first_player_results.append(first_player_revenue)
+            second_players_results.append(second_player_revenue)
+
+
 print("Stop ")
 print("Time of execution {:.2f} in seconds ".format(time.time() - start_time))
