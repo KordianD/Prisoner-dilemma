@@ -1,4 +1,5 @@
 from config import BETRAYAL, SILENCE
+import random
 
 
 class AlwaysBetrayal:
@@ -19,7 +20,7 @@ class AlwaysSilence:
 
 class PreviousCompetitorAnswer:
     def __init__(self):
-        self.previous_competitor_answer = SILENCE
+        self.previous_competitor_answer = random.choice([SILENCE, BETRAYAL])
 
     def answer(self):
         return self.previous_competitor_answer
@@ -30,7 +31,7 @@ class PreviousCompetitorAnswer:
 
 class AlternatelyAnswer:
     def __init__(self):
-        self.previous_self_answer = SILENCE
+        self.previous_self_answer = random.choice([SILENCE, BETRAYAL])
 
     def answer(self):
         if self.previous_self_answer == SILENCE:
@@ -39,6 +40,14 @@ class AlternatelyAnswer:
             self.previous_self_answer = SILENCE
 
         return self.previous_self_answer
+
+    def set_competitor_answer(self, answer_of_competitor: int):
+        pass
+
+
+class RandomChoice:
+    def answer(self) -> int:
+        return random.choice([SILENCE, BETRAYAL])
 
     def set_competitor_answer(self, answer_of_competitor: int):
         pass
